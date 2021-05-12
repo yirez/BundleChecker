@@ -28,10 +28,9 @@ class LoopHelper:
         self.analyse_files(root_dir)
         if self.failed == 1:
             print("Bundle mismatch")
-            sys.exit(1)
         else:
             print("Bundle check finished- No Mismatch")
-            sys.exit(0)
+        sys.exit(self.failed)
 
     def analyse_files(self, root_dir):
         """
